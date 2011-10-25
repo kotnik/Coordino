@@ -267,7 +267,7 @@ class UsersController extends AppController {
         			'OR' => array(
         				'name' => array('rep_vote_up', 'rep_comment', 'rep_vote_down',
         								'rep_advertising', 'rep_edit', 'rep_flag',
-        								'flag_display_limit')
+        								'flag_display_limit', 'site_closed')
         			)
         		)
         	)

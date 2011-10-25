@@ -28,9 +28,16 @@
 		<h3>Flag: <span class="small"><?=$settings['5']['Setting']['description'];?></span></h3>
 		<input type="text" name="data[Setting][5][value]" value="<?=$settings['5']['Setting']['value'];?>"/>
 	</div>
-	<div id="old_password">
+	<div>
 		<h3>Display Limit: <span class="small"><?=$settings['6']['Setting']['description'];?></span></h3>
 		<input type="text" name="data[Setting][6][value]" value="<?=$settings['6']['Setting']['value'];?>"/>
+	</div>
+	<div>
+		<h3>Site closed: <span class="small"><?=$settings['7']['Setting']['description'];?></span></h3>
+		<select name="data[Setting][11][value]">
+			<option <? echo ($settings['7']['Setting']['value'] == 'no') ? 'selected="yes"' : ''; ?>>no</option>
+			<option <? echo ($settings['7']['Setting']['value'] == 'yes') ? 'selected="yes"' : ''; ?>>yes</option>
+		</select>
 	</div>
 	<div class="submit">
 		<input type="submit" value="Update Settings"/>

@@ -196,7 +196,8 @@ INSERT INTO `settings` (`id`, `name`, `value`, `autoload`, `description`) VALUES
 (8, 'remote_auth_only', 'no', 0, 'If set to ''yes'' logins will only be available via  third party login script.'),
 (9, 'remote_auth_login_url', '', 0, 'The URL that a user must login through to access the site.'),
 (10, 'remote_auth_logout_url', '', 0, 'The URL a user gets redirected to once they logout.'),
-(11, 'site_maintenance', 'no', 0, 'If set to ''yes'', all pages should redirect to a message that the site is being updated/maintained.');
+(11, 'site_maintenance', 'no', 0, 'If set to ''yes'', all pages should redirect to a message that the site is being updated/maintained.'),
+(12, 'site_closed', 'no', 1, 'If set to ''yes'', website will be accessible only to logged in users.');
 
 -- --------------------------------------------------------
 
