@@ -13,6 +13,7 @@ class BugsController extends AppController
 	
 	function beforeRender() {
 		$this->underMaintenance();
+    $this->siteClosed();
 	}
 	
 function beforeFilter(){

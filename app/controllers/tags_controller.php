@@ -7,7 +7,8 @@ class TagsController extends AppController {
 	
 	public function beforeRender() {
 		$this->getWidgets();
-    	$this->underMaintenance();
+    $this->underMaintenance();
+    $this->siteClosed();
     }
     
 	public function search($needle='') {

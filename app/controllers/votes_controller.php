@@ -10,6 +10,7 @@ class VotesController extends AppController {
 	
     function beforeRender() {
     	$this->underMaintenance();
+      $this->siteClosed();
     }
     
     function vote($public_key, $type) {

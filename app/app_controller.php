@@ -62,6 +62,19 @@ class AppController extends Controller {
 			$this->redirect('/maintenance');
 		}
 	}
+	public function siteClosed() {
+    if (!is_object($this->Auth)) {
+      $closed = $this->Setting->find('first', array('conditions' => array('name' => 'site_closed')));
+      if(($closed['Setting']['value'] == 'yes') && ($_SERVER['REQUEST_URI'] != '/login' && $_SERVER['REQUEST_URI'] != '/register')) {
+        $this->redirect('/login');
+      }
+    } else if(!$this->Auth->user('id')) {
+      $closed = $this->Setting->find('first', array('conditions' => array('name' => 'site_closed')));
+      if(($closed['Setting']['value'] == 'yes') && ($_SERVER['REQUEST_URI'] != '/login' && $_SERVER['REQUEST_URI'] != '/register')) {
+        $this->redirect('/login');
+      }
+    }
+  }
 	public function __encrypt($string) {
 	    return $string;
 	}

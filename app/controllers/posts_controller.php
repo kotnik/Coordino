@@ -10,6 +10,7 @@ class PostsController extends AppController {
 	public function beforeRender() {
 		$this->getWidgets();
 		$this->underMaintenance();
+    $this->siteClosed();
 	}
 	
 	public function beforeFilter() {

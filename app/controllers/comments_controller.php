@@ -8,6 +8,7 @@ class CommentsController extends AppController {
 	
 	function beforeRender() {
 		$this->underMaintenance();
+    $this->siteClosed();
 	}
 	public function comment($public_key) {
 		if(!$this->Auth->user('id')) {
